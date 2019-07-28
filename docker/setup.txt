@@ -17,7 +17,7 @@ echo "[+] Remove old WebMap container"
 docker stop webmap 2> /dev/null
 docker rm webmap 2> /dev/null
 echo "[+] Run WebMap container"
-docker run -d --name webmap -h webmap -p 8000:8000 -v /tmp/webmap:/opt/xml rev3rse/webmap
+docker run -d --name webmap -h webmap -p 8000:8000 -v /tmp/webmap:/opt/xml marcositu/webmap
 echo "[+] Configure TimeZone for container"
 docker exec -ti webmap bash /root/tzdata.sh
 echo "[+] Restart container"
