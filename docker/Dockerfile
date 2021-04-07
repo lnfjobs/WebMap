@@ -21,7 +21,7 @@ FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
+RUN apt-get update && apt-get install -y \
     apt-utils python3 python3-pip curl wget git wkhtmltopdf libssl1.0-dev vim nmap tzdata
 
 RUN mkdir /opt/xml && mkdir /opt/notes && \
